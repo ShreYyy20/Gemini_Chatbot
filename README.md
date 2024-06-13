@@ -1,5 +1,5 @@
 # Gemini ChatBot
-Gemini ChatBot is a Django-based web application that allows users to have conversational interactions with an AI assistant powered by Google's Generative AI.
+Gemini ChatBot is a Django-based web application that allows users to have conversational interactions with an AI assistant powered by Google's Gemini API.
 
 ## Features
 
