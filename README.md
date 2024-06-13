@@ -51,7 +51,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-2. Open your web browser and visit http://localhost:8000/chat to access the Gemini ChatBot.
+2. Open your web browser and visit http://YourIPAddress/8000/chat to access the Gemini ChatBot.
 
 
 ## Contributing
