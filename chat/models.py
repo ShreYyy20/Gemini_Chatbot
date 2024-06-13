@@ -5,7 +5,7 @@ class Chat(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        db_table = 'chat'  # Specify the table name as 'chat'
+        db_table = 'chat' 
 
     def __str__(self):
         return self.name
