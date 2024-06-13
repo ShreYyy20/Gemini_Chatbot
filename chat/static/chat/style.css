@@ -1,0 +1,19 @@
+.chat-container {
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+#chat-box {
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#chat-input {
+    width: 80%;
+}
+button {
+    width: 18%;
+}

@@ -1,0 +1,98 @@
+<!-- chat.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini ChatBot</title>
+    <style>
+        button{
+            background-color: #04AA6D; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 10PX;
+            }
+            input{
+                width: 85%;
+                background-color: #237054; /* Green */
+                border: none;
+                border-radius: 10PX;
+                padding: 15px 32px;
+                text-align:left;
+                text-decoration:solid;
+                display:inline-flex;
+                font-size: 16px;
+                place-self: center;
+        }
+        .chat-container {
+            max-width: 100%;
+            margin-left: 20%;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            word-wrap: break-word;
+            display: flex;
+            flex-direction: column;
+
+        }
+        .user-message {
+            margin-left: auto;
+            background-color: #5eff5b;
+            border-radius: 10px;
+            padding: 10px 20px;
+        }
+        .bot-message {
+            max-width: 70%;
+            margin-right: auto;
+            background-color: #00ff0d;
+            border-radius: 10px;
+            padding: 10px 20px;
+        }
+        .message-container {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div id="chat-messages" class="message-container">
+            {% for message in messages %}
+                <div class="message">
+                    {% if message.user_message %}
+                    <div class="user-message">
+                        <strong>You:</strong><p>{{ message.user_message }}</p>
+                        </div>
+                        {% endif %}
+                        {% if message.bot_response %}
+                            <div class="bot-message" markdown="1">
+                                <strong>Gemini:</strong><p>{{ message.bot_response }}</p>
+                            </div>
+                        {% endif %}
+                </div>
+            {% endfor %}
+            </div>
+        <div class="typebox">
+        <form action="{% url 'send_message' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="user_message" placeholder="Type your message here...">
+            <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
