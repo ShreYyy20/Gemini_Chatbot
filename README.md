@@ -10,7 +10,7 @@ Gemini ChatBot is a Django-based web application that allows users to have conve
 
 ## Prerequisites
 
-- Python 3.x
+- Python 3.10
 - Pipenv (Python virtual environment and package management tool)
 ### If you do not have pipenv installed use this command:
 ```bash
