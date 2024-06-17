@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-0+mty0ebw!4$=*rsyt%+_jj!5-rq1!fdgb1&iwdqf(gb+d^osm'
-GENERATIVE_AI_KEY = os.environ.get('GENERATIVE_AI_KEY') # Don't forget to import os package
+GENERATIVE_AI_KEY = os.environ.get('GENERATIVE_AI_KEY') 
 
 if not GENERATIVE_AI_KEY:
     raise ValueError('GENERATIVE_AI_KEY environment variable not set')
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'geminichatbot.urls'
 
 TEMPLATES = [
     {
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Update DIRS path. Don't forget to include os package.
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
